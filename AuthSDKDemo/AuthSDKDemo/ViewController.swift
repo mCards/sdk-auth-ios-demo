@@ -19,15 +19,16 @@ class ViewController: UIViewController {
 
     // MARK: - Methods
     private func setupAuthSDK() {
-        let auth0ClientID = "DL8XpUmzegVl9dR8QpO9djDifTY7nGyd"
-        let auth0Domain = "mcards-test.au.auth0.com"
-        let auth0Audience = "https://staging.mcards.com/api"
+        let auth0ClientID = "DL8XpUmzegVl9dR8QpO9djDifTY7nGyd" // Auth0 client ID gotten from the mCards team
+        let auth0Domain = "mcards-test.au.auth0.com" // Auth0 Domain gotten from the mCards team
+        let auth0Audience = "https://staging.mcards.com/api" // Auth0 audience gotten from the mCards team
         
         let args = Auth0Args(
             auth0ClientID: auth0ClientID,
             auth0Domain: auth0Domain,
             auth0Audience: auth0Audience)
         
+        // Configure the SDK
         AuthSdkProvider.shared.configure(args: args)
         
         // Set logging to the console and/or Firebase
@@ -35,9 +36,9 @@ class ViewController: UIViewController {
     }
     
     private func login() {
-        let savedPhoneNumber = ""
-        let regionCode: RegionCode? = nil
-        let deepLink: DeepLink? = nil
+        let savedPhoneNumber = "" // Save phone number used to pre-populate the login form
+        let regionCode: RegionCode? = nil // Forces login into a specific region
+        let deepLink: DeepLink? = nil // Parsed DeepLink object if the app was launched from a Firebase Link
         
         /* 
          Provide the dynamic link url from a firebase dynamic link e.g.
