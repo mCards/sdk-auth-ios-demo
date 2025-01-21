@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		14F173DF2D3EE4D00039A360 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 14F173DE2D3EE4D00039A360 /* Base */; };
 		14F173E12D3EE4D20039A360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F173E02D3EE4D20039A360 /* Assets.xcassets */; };
 		14F173E42D3EE4D20039A360 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 14F173E32D3EE4D20039A360 /* Base */; };
+		14F173ED2D3EE9D90039A360 /* CoreSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 14F173EC2D3EE9D90039A360 /* CoreSDK */; };
+		14F173F02D3EE9EA0039A360 /* AuthSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 14F173EF2D3EE9EA0039A360 /* AuthSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F173ED2D3EE9D90039A360 /* CoreSDK in Frameworks */,
+				14F173F02D3EE9EA0039A360 /* AuthSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = AuthSDKDemo;
+			packageProductDependencies = (
+				14F173EC2D3EE9D90039A360 /* CoreSDK */,
+				14F173EF2D3EE9EA0039A360 /* AuthSDK */,
+			);
 			productName = AuthSDKDemo;
 			productReference = 14F173D42D3EE4D00039A360 /* AuthSDKDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,10 @@
 				Base,
 			);
 			mainGroup = 14F173CB2D3EE4D00039A360;
+			packageReferences = (
+				14F173EB2D3EE9D90039A360 /* XCRemoteSwiftPackageReference "sdk-model-ios-framework" */,
+				14F173EE2D3EE9EA0039A360 /* XCLocalSwiftPackageReference "../../sdk-auth-ios-framework" */,
+			);
 			productRefGroup = 14F173D52D3EE4D00039A360 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +375,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		14F173EE2D3EE9EA0039A360 /* XCLocalSwiftPackageReference "../../sdk-auth-ios-framework" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../sdk-auth-ios-framework";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14F173EB2D3EE9D90039A360 /* XCRemoteSwiftPackageReference "sdk-model-ios-framework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wantsa/sdk-model-ios-framework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		14F173EC2D3EE9D90039A360 /* CoreSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14F173EB2D3EE9D90039A360 /* XCRemoteSwiftPackageReference "sdk-model-ios-framework" */;
+			productName = CoreSDK;
+		};
+		14F173EF2D3EE9EA0039A360 /* AuthSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14F173CC2D3EE4D00039A360 /* Project object */;
 }
