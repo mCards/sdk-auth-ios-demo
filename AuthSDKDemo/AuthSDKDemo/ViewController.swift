@@ -10,16 +10,19 @@ import CoreSDK
 import AuthSDK
 
 class ViewController: UIViewController {
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupAuthSDK()
     }
 
+    // MARK: - Methods
     private func setupAuthSDK() {
         let auth0ClientID = "DL8XpUmzegVl9dR8QpO9djDifTY7nGyd"
         let auth0Domain = "mcards-test.au.auth0.com"
         let auth0Audience = "https://staging.mcards.com/api"
+        
         let args = Auth0Args(
             auth0ClientID: auth0ClientID,
             auth0Domain: auth0Domain,
@@ -27,7 +30,8 @@ class ViewController: UIViewController {
         
         AuthSdkProvider.shared.configure(args: args)
         
-        // TODO: Set logging settings
+        // Set logging to the console and/or Firebase
+        AuthSdkProvider.shared.setLogging(debugMode: true, loggingCallback: LoggingHandler())
     }
     
     private func login() {
@@ -82,6 +86,7 @@ class ViewController: UIViewController {
         print("Logout result: \(logoutMessage)")
     }
     
+    // MARK: - Actions
     @IBAction func tappedLogin(_ sender: Any) {
         login()
     }
@@ -91,3 +96,14 @@ class ViewController: UIViewController {
     }
 }
 
+class LoggingHandler: LoggingCallback {
+    func log(message: String) {
+        // Implement Crashlytics log
+        // Crashlytics.crashlytics().log(message)
+    }
+    
+    func logNonFatal(nsError: NSError) {
+        // Implement Crashlytics log non-fatal
+        // Crashlytics.crashlytics().record(error: nsError)
+    }
+}
