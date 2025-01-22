@@ -9,7 +9,7 @@ import UIKit
 import CoreSDK
 import AuthSDK
 
-class ViewController: UIViewController {
+class AuthSDKDemoViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
