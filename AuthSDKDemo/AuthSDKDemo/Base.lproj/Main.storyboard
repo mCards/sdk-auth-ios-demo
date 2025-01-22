@@ -45,15 +45,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="864-45-v9Y">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9QK-YD-YJJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5DB-Y2-aIb"/>
+                            <constraint firstItem="864-45-v9Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jcn-3L-zuz"/>
+                            <constraint firstItem="864-45-v9Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LZ6-Ao-bHS"/>
                             <constraint firstItem="9QK-YD-YJJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ODZ-vw-luI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="mCards Auth SDK Demo" id="i6j-fR-uaJ"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="864-45-v9Y" id="EcN-Vn-uXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

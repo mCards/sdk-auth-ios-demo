@@ -10,6 +10,9 @@ import CoreSDK
 import AuthSDK
 
 class ViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +57,11 @@ class ViewController: UIViewController {
             regionCode: regionCode,
             deepLink: deepLink)
         
+        activityIndicator.startAnimating()
+        
         AuthSdkProvider.shared.login(args: loginArgs) { [weak self] result in
+            self?.activityIndicator.stopAnimating()
+            
             switch result {
             case .success(let authSuccess):
                 // Get any required data
@@ -71,7 +78,11 @@ class ViewController: UIViewController {
     }
     
     private func getUserProfileMetadata() {
-        AuthSdkProvider.shared.getUserProfileMetadata { result in
+        activityIndicator.startAnimating()
+        
+        AuthSdkProvider.shared.getUserProfileMetadata { [weak self] result in
+            self?.activityIndicator.stopAnimating()
+            
             switch result {
             case .success(let profileMetaData):
                 // Use profile metadata
@@ -84,7 +95,11 @@ class ViewController: UIViewController {
     }
     
     private func logout() {
-        AuthSdkProvider.shared.logout { success in
+        activityIndicator.startAnimating()
+        
+        AuthSdkProvider.shared.logout { [weak self] success in
+            self?.activityIndicator.stopAnimating()
+            
             let logoutMessage = success ? "Success" : "Failure"
             print("Logout result: \(logoutMessage)")
         }
