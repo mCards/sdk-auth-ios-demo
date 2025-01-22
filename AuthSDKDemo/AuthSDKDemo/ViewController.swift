@@ -35,8 +35,9 @@ class ViewController: UIViewController {
         AuthSdkProvider.shared.setLogging(debugMode: true, loggingCallback: LoggingHandler())
     }
     
-    private func login() {
+    private func login(forceAuth: Bool) {
         let savedPhoneNumber = "" // Save phone number used to pre-populate the login form
+        let forceAuth = forceAuth // Forces credentials entry if true
         let regionCode: RegionCode? = nil // Forces login into a specific region
         let deepLink: DeepLink? = nil // Parsed DeepLink object if the app was launched from a Firebase Link
         
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
         
         let loginArgs = LoginArgs(
             savedPhoneNumber: savedPhoneNumber,
+            forceAuth: forceAuth,
             regionCode: regionCode,
             deepLink: deepLink)
         
@@ -82,14 +84,19 @@ class ViewController: UIViewController {
     }
     
     private func logout() {
-        let logoutResult = AuthSdkProvider.shared.logout()
-        let logoutMessage = logoutResult ? "Success" : "Failure"
-        print("Logout result: \(logoutMessage)")
+        AuthSdkProvider.shared.logout { success in
+            let logoutMessage = success ? "Success" : "Failure"
+            print("Logout result: \(logoutMessage)")
+        }
     }
     
     // MARK: - Actions
     @IBAction func tappedLogin(_ sender: Any) {
-        login()
+        login(forceAuth: true)
+    }
+    
+    @IBAction func tappedQuietLogin(_ sender: Any) {
+        login(forceAuth: false)
     }
     
     @IBAction func tappedLogout(_ sender: Any) {

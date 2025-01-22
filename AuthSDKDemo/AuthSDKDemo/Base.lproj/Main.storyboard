@@ -17,18 +17,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="9QK-YD-YJJ">
-                                <rect key="frame" x="158" y="373.66666666666669" width="77.333333333333314" height="104.66666666666669"/>
+                                <rect key="frame" x="138.66666666666666" y="338.66666666666669" width="115.66666666666666" height="175.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg4-60-Ykh">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="115.66666666666667" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                         <connections>
                                             <action selector="tappedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dmb-YT-PU4"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvh-b6-PJk">
+                                        <rect key="frame" x="0.0" y="70.333333333333314" width="115.66666666666667" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Quiet Log In"/>
+                                        <connections>
+                                            <action selector="tappedQuietLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZG-HJ-7Mi"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUj-pc-xfF">
-                                        <rect key="frame" x="0.0" y="70.333333333333314" width="77.333333333333329" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="140.66666666666663" width="115.66666666666667" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Logout"/>
                                         <connections>
