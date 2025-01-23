@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14137D8A2D42EF89001AA5C6 /* AuthSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 14137D892D42EF89001AA5C6 /* AuthSDK */; };
 		14F173D82D3EE4D00039A360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F173D72D3EE4D00039A360 /* AppDelegate.swift */; };
 		14F173DA2D3EE4D00039A360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F173D92D3EE4D00039A360 /* SceneDelegate.swift */; };
 		14F173DC2D3EE4D00039A360 /* AuthSDKDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F173DB2D3EE4D00039A360 /* AuthSDKDemoViewController.swift */; };
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14137D8A2D42EF89001AA5C6 /* AuthSDK in Frameworks */,
 				14F173ED2D3EE9D90039A360 /* CoreSDK in Frameworks */,
 				14F173F02D3EE9EA0039A360 /* AuthSDK in Frameworks */,
 			);
@@ -90,6 +92,7 @@
 			packageProductDependencies = (
 				14F173EC2D3EE9D90039A360 /* CoreSDK */,
 				14F173EF2D3EE9EA0039A360 /* AuthSDK */,
+				14137D892D42EF89001AA5C6 /* AuthSDK */,
 			);
 			productName = AuthSDKDemo;
 			productReference = 14F173D42D3EE4D00039A360 /* AuthSDKDemo.app */;
@@ -121,7 +124,7 @@
 			mainGroup = 14F173CB2D3EE4D00039A360;
 			packageReferences = (
 				14F173EB2D3EE9D90039A360 /* XCRemoteSwiftPackageReference "sdk-model-ios-framework" */,
-				14F173EE2D3EE9EA0039A360 /* XCLocalSwiftPackageReference "../../sdk-auth-ios-framework" */,
+				14137D882D42EF89001AA5C6 /* XCLocalSwiftPackageReference "../../sdk-auth-ios-framework" */,
 			);
 			productRefGroup = 14F173D52D3EE4D00039A360 /* Products */;
 			projectDirPath = "";
@@ -312,6 +315,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,6 +344,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,7 +382,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		14F173EE2D3EE9EA0039A360 /* XCLocalSwiftPackageReference "../../sdk-auth-ios-framework" */ = {
+		14137D882D42EF89001AA5C6 /* XCLocalSwiftPackageReference "../../sdk-auth-ios-framework" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../../sdk-auth-ios-framework";
 		};
@@ -395,6 +400,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		14137D892D42EF89001AA5C6 /* AuthSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthSDK;
+		};
 		14F173EC2D3EE9D90039A360 /* CoreSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14F173EB2D3EE9D90039A360 /* XCRemoteSwiftPackageReference "sdk-model-ios-framework" */;
