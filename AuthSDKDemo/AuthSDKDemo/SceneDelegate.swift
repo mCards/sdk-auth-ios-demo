@@ -52,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let url = URLContexts.first?.url else { return }
         
         // Call this method to redirect to the app
-        AuthSdkProvider.shared.handleCallback(url: url)
+        AuthSdkProvider.shared.handleAuth0Result(url: url)
     }
 
 }
