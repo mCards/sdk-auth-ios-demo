@@ -59,7 +59,7 @@ class AuthSDKDemoViewController: UIViewController {
         
         activityIndicator.startAnimating()
         
-        AuthSdkProvider.shared.login(args: loginArgs) { [weak self] result in
+        AuthSdkProvider.shared.auth0Authenticate(args: loginArgs) { [weak self] result in
             self?.activityIndicator.stopAnimating()
             
             switch result {
@@ -80,13 +80,13 @@ class AuthSDKDemoViewController: UIViewController {
     private func getUserProfileMetadata() {
         activityIndicator.startAnimating()
         
-        AuthSdkProvider.shared.getUserProfileMetadata { [weak self] result in
+        AuthSdkProvider.shared.getUserMetadata { [weak self] result in
             self?.activityIndicator.stopAnimating()
             
             switch result {
             case .success(let profileMetaData):
                 // Use profile metadata
-                let requiresAddress = profileMetaData.cardHolderAddressRequired
+                let requiresAddress = profileMetaData.profileMetadata?.requiresAddress
                 print("Requires address: \(requiresAddress)")
             case .failure(let error):
                 print(error.localizedDescription)
