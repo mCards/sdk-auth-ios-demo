@@ -1,13 +1,13 @@
 {
-  "originHash" : "ede3af221c5df6f519591f601b6867f75ce4dd57918eeb4d733df6ceba7621a0",
+  "originHash" : "76c0d2e99d9dc4b38dc2ac1c25907afe37406ca48b9388e43fea2765b34f6310",
   "pins" : [
     {
       "identity" : "sdk-auth-ios-framework",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Wantsa/sdk-auth-ios-framework",
       "state" : {
-        "revision" : "5516187ae5d4f46f125f34021e53be4816b82c6e",
-        "version" : "1.0.0"
+        "revision" : "e59a75b663f72233a7c2d9094c16c079b14a065d",
+        "version" : "1.0.6"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Wantsa/sdk-model-ios-framework",
       "state" : {
-        "revision" : "1469f8163ee19376bff2ab1717536adbaefe0967",
-        "version" : "1.1.0"
+        "revision" : "68560b8d709e76fdb83d16350afe360341a2abb7",
+        "version" : "1.1.4"
       }
     }
   ],
